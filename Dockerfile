@@ -43,22 +43,10 @@ ENV KEEWEB_OPEN 0
 ENV KEEWEB_IMPORTXML 0
 ENV KEEWEB_SETTINGS 0
 ENV KEEWEB_WEBDAVMETHOD default
-ENV KEEWEB_WEBDAVURL
-ENV KEEWEB_WEBDAVUSER
-ENV KEEWEB_WEBDAVPASSWORD
+ENV KEEWEB_WEBDAVURL http://
+ENV KEEWEB_WEBDAVUSER youruser
 
 EXPOSE 80
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["app"]
-
-
-canOpenDemo:!0 -> canOpenDemo:!1
-canCreate:!0 -> canCreate:!1
-canOpen:!0 -> canOpen:!1
-canImportXml:!0 -> canImportXml:!1
-canOpenSettings:!0 -> canOpenSettings:!1
-get("webdavSaveMethod")||"default" -> get("webdavSaveMethod")||"put"
-title:"openUrl" -> title:"openUrl",value:"http://monserver/myfile"
-title:"openUser" -> title:"openUser",value:"myuser"
-title:"openPass" -> title:"openPass",value:"myuser"

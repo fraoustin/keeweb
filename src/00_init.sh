@@ -17,4 +17,3 @@ sed -i 's/canOpenSettings:!0/canOpenSettings:!'$KEEWEB_SETTINGS'/g' /usr/share/n
 sed -i 's/get("webdavSaveMethod")||"default"/get("webdavSaveMethod")||"'$KEEWEB_WEBDAVMETHOD'"/g' /usr/share/nginx/html/index.html
 sed -i 's/title:"openUrl"/title:"openUrl",value:"'$KEEWEB_WEBDAVURL'"/g' /usr/share/nginx/html/index.html
 sed -i 's/title:"openUser"/title:"openUser",value:"'$KEEWEB_WEBDAVUSER'"/g' /usr/share/nginx/html/index.html
-sed -i 's/title:"openPass"/title:"openPass",value:"'$KEEWEB_WEBDAVPASSWORD'"/g' /usr/share/nginx/html/index.html

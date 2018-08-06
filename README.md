@@ -27,9 +27,8 @@ load when start image load file in
 - KEEWEB_IMPORTXML add button import xml, default 0 (0/1)
 - KEEWEB_SETTINGS add button setting, default 0 (0/1)
 - KEEWEB_WEBDAVMETHOD type of save on webdav, default default (default/put)
-- KEEWEB_WEBDAVURL value of url webdav, default ''
-- KEEWEB_WEBDAVUSER value of user webdav, default ''
-- KEEWEB_WEBDAVPASSWORD value of password, webdav default ''
+- KEEWEB_WEBDAVURL value of url webdav, default 'http://'
+- KEEWEB_WEBDAVUSER value of user webdav, default 'youruser'
 
 ## Port
 
