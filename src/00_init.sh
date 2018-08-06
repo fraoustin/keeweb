@@ -2,10 +2,7 @@
 rm /usr/share/nginx/html/index.html
 cp /usr/share/nginx/html/index.html.ini /usr/share/nginx/html/index.html
 
-sed -i 's/"locale","en"/"locale","'$KEEWEB_LANG'"/g' /usr/share/nginx/html/index.html
-sed -i 's/activeLocale:"en"/activeLocale:"'$KEEWEB_LANG'"/g' /usr/share/nginx/html/index.html
-sed -i 's/,locale:null/,locale:'$KEEWEB_LANG'/g' /usr/share/nginx/html/index.html
-sed -i 's/||"en"/||"'$KEEWEB_LANG'"/g' /usr/share/nginx/html/index.html
+sed -i 's/,locale:null/,locale:""'$KEEWEB_LANG'"/g' /usr/share/nginx/html/index.html
 sed -i 's/"theme","fb"/"theme","'$KEEWEB_THEME'"/g' /usr/share/nginx/html/index.html
 sed -i 's/theme:"fb"/theme:"'$KEEWEB_THEME'"/g' /usr/share/nginx/html/index.html
 sed -i 's/webdav:!0/webdav:!'$KEEWEB_WEBDAV'/g' /usr/share/nginx/html/index.html
@@ -21,3 +18,5 @@ sed -i 's/canOpenSettings:!0/canOpenSettings:!'$KEEWEB_SETTINGS'/g' /usr/share/n
 sed -i 's/get("webdavSaveMethod")||"default"/get("webdavSaveMethod")||"'$KEEWEB_WEBDAVMETHOD'"/g' /usr/share/nginx/html/index.html
 sed -i 's|title:"openUrl"|title:"openUrl",default:"'$KEEWEB_WEBDAVURL'"|g' /usr/share/nginx/html/index.html
 sed -i 's/title:"openUser"/title:"openUser",default:"'$KEEWEB_WEBDAVUSER'"/g' /usr/share/nginx/html/index.html
+
+

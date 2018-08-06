@@ -30,7 +30,7 @@ COPY ./src/index.html /usr/share/nginx/html/index.html
 COPY ./src/index.html /usr/share/nginx/html/index.html.ini
 COPY ./src/manifest.appcache /usr/share/nginx/html/manifest.appcache
 
-ENV KEEWEB_LANG en
+ENV KEEWEB_LANG English
 ENV KEEWEB_THEME fb
 ENV KEEWEB_WEBDAV 0
 ENV KEEWEB_DROPBOX 0
