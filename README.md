@@ -14,6 +14,23 @@ load when start image load file in
 - SET_CONTAINER_TIMEZONE (false or true) manage time of container
 - CONTAINER_TIMEZONE timezone of container
 
+- KEEWEB_LANG language of keeweb, default en
+- KEEWEB_THEME theme, default fb (fb/db/sd/sl/wh/te/hc)
+- KEEWEB_WEBDAV support webdav, default 0 (0/1)
+- KEEWEB_DROPBOX support dropbox, default 0 (0/1)
+- KEEWEB_GDRIVE support google drive, default 0 (0/1)
+- KEEWEB_ONEDRIVE support onedrive, default 0 (0/1)
+- KEEWEB_SKIPWARNING enable skip https warning, default 1 (0/1)
+- KEEWEB_OPENDEMO add button open demo, default 0 (0/1)
+- KEEWEB_CREATE add button create, default 0 (0/1)
+- KEEWEB_OPEN add button open, default 0 (0/1)
+- KEEWEB_IMPORTXML add button import xml, default 0 (0/1)
+- KEEWEB_SETTINGS add button setting, default 0 (0/1)
+- KEEWEB_WEBDAVMETHOD type of save on webdav, default default (default/put)
+- KEEWEB_WEBDAVURL value of url webdav, default ''
+- KEEWEB_WEBDAVUSER value of user webdav, default ''
+- KEEWEB_WEBDAVPASSWORD value of password, webdav default ''
+
 ## Port
 
 - 80 
