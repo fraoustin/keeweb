@@ -3,6 +3,8 @@ rm /usr/share/nginx/html/index.html
 cp /usr/share/nginx/html/index.html.ini /usr/share/nginx/html/index.html
 
 sed -i 's/"locale","en"/"locale","'$KEEWEB_LANG'"/g' /usr/share/nginx/html/index.html
+sed -i 's/activeLocale:"en"/activeLocale:"'$KEEWEB_LANG'"/g' /usr/share/nginx/html/index.html
+sed -i 's/||"en"/||"'$KEEWEB_LANG'"/g' /usr/share/nginx/html/index.html
 sed -i 's/"theme","fb"/"theme","'$KEEWEB_THEME'"/g' /usr/share/nginx/html/index.html
 sed -i 's/theme:"fb"/theme:"'$KEEWEB_THEME'"/g' /usr/share/nginx/html/index.html
 sed -i 's/webdav:!0/webdav:!'$KEEWEB_WEBDAV'/g' /usr/share/nginx/html/index.html
