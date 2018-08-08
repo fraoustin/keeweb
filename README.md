@@ -14,6 +14,7 @@ load when start image load file in
 - SET_CONTAINER_TIMEZONE (false or true) manage time of container
 - CONTAINER_TIMEZONE timezone of container
 
+- KEEWEB_TITLE title of page, default KeepWeb
 - KEEWEB_LANG language of keeweb, default English (English/de-DE/fr-FR)
 - KEEWEB_THEME theme, default fb (fb/db/sd/sl/wh/te/hc)
 - KEEWEB_WEBDAV support webdav, default 0 (0/1)
