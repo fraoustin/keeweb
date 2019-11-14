@@ -30,6 +30,11 @@ load when start image load file in
 - KEEWEB_WEBDAVMETHOD type of save on webdav, default default (default/put)
 - KEEWEB_WEBDAVURL value of url webdav, default 'http://'
 - KEEWEB_WEBDAVUSER value of user webdav, default 'youruser'
+- KEEWEB_WEBDAVPASSWORD value of user webdav, for enabled webdav server
+
+## Volume
+
+- /share if enabled webdav server
 
 ## Port
 

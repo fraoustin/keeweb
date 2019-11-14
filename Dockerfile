@@ -1,4 +1,4 @@
-FROM nginx:1.15
+FROM nginx:1.17
 LABEL maintainer "fraoustin@gmail.com"
 
 ENV SET_CONTAINER_TIMEZONE false 
@@ -19,7 +19,6 @@ RUN chmod +x -R /usr/share/docker-entrypoint.pre
 # install extra nginx
 RUN apt-get update && apt-get install -y \
         apache2-utils \
-        git \
         nginx-extras \
     && rm -rf /var/lib/apt/lists/* 
 
@@ -29,6 +28,13 @@ RUN rm /etc/nginx/sites-enabled/default
 COPY ./src/index.html /usr/share/nginx/html/index.html
 COPY ./src/index.html /usr/share/nginx/html/index.html.ini
 COPY ./src/manifest.appcache /usr/share/nginx/html/manifest.appcache
+
+# add cmd nginx
+COPY ./src/cmd/addauth.sh /usr/bin/addauth
+COPY ./src/cmd/rmauth.sh /usr/bin/rmauth
+RUN chmod +x /usr/bin/addauth
+RUN chmod +x /usr/bin/rmauth
+
 
 ENV KEEWEB_LANG English
 ENV KEEWEB_THEME fb
@@ -45,8 +51,11 @@ ENV KEEWEB_SETTINGS 0
 ENV KEEWEB_WEBDAVMETHOD default
 ENV KEEWEB_WEBDAVURL http://
 ENV KEEWEB_WEBDAVUSER youruser
+ENV KEEWEB_WEBDAVPASSWORD ""
 ENV KEEWEB_TITLE KeeWeb
 
+RUN mkdir /share
+VOLUME /share
 EXPOSE 80
 
 ENTRYPOINT ["/entrypoint.sh"]

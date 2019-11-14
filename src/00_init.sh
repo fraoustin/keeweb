@@ -18,3 +18,8 @@ sed -i 's|KEEWEB_WEBDAVURL|'$KEEWEB_WEBDAVURL'|g' /usr/share/nginx/html/index.ht
 sed -i 's/KEEWEB_WEBDAVUSER/'$KEEWEB_WEBDAVUSER'/g' /usr/share/nginx/html/index.html
 sed -i 's/KEEWEB_WEBDAV/'$KEEWEB_WEBDAV'/g' /usr/share/nginx/html/index.html
 sed -i 's/KEEWEB_TITLE/'$KEEWEB_TITLE'/g' /usr/share/nginx/html/index.html
+
+
+if [ ! -z "$KEEWEB_WEBDAVPASSWORD" ]; then
+    addauth $KEEWEB_WEBDAVUSER $KEEWEB_WEBDAVPASSWORD
+fi    
