@@ -28,6 +28,13 @@ RUN rm /etc/nginx/sites-enabled/default
 COPY ./src/index.html /usr/share/nginx/html/index.html
 COPY ./src/index.html /usr/share/nginx/html/index.html.ini
 COPY ./src/manifest.appcache /usr/share/nginx/html/manifest.appcache
+COPY ./src/oauth-result /usr/share/gninx/html/oauth-result
+COPY ./src/manifest.json /usr/share/gninx/html/manifest.json
+COPY ./src/update.json /usr/share/gninx/html/update.json
+COPY ./src/404.html /usr/share/gninx/html/404.html
+COPY ./src/icons /usr/share/gninx/html/icons
+COPY ./src/service-worker.js /usr/share/gninx/html/service-worker.js
+COPY ./src/browserconfig.xml /usr/share/gninx/html/browserconfig.xml
 
 # add cmd nginx
 COPY ./src/cmd/addauth.sh /usr/bin/addauth
